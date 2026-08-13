@@ -1,19 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
   <title>Ummah Education System | Quran & Academic Excellence</title>
-  <!-- Google Fonts & simple CSS reset -->
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+
   <style>
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    body {                
+    body {
       font-family: 'Inter', sans-serif;
       background: #efefea;
       color: #0A1F2E;
@@ -38,12 +42,14 @@
       padding: 0 32px;
     }
 
-    /* navbar & logo row - logo on left inline with brand */
+    /* ================= NAVBAR ================= */
+
     .navbar {
       background: #0A1C1A;
       padding: 16px 0;
       border-bottom: 3px solid var(--accent-gold);
     }
+
     .nav-flex {
       display: flex;
       justify-content: space-between;
@@ -51,22 +57,25 @@
       flex-wrap: wrap;
       gap: 20px;
     }
-    /* brand group: logo + text side by side */
+
     .brand-group {
       display: flex;
       align-items: center;
       gap: 16px;
     }
+
     .logo-wrapper {
       display: flex;
       align-items: center;
     }
+
     .logo-flip {
       display: inline-block;
       perspective: 1000px;
       cursor: pointer;
       line-height: 0;
     }
+
     .site-logo {
       max-height: 55px;
       width: auto;
@@ -74,10 +83,11 @@
       transition: transform 0.6s ease;
       border-radius: 12px;
     }
+
     .logo-flip:hover .site-logo {
       transform: rotateY(180deg);
     }
-    /* fallback placeholder if image missing */
+
     .logo-placeholder {
       background: linear-gradient(135deg, #D4AF37, #F5B041);
       width: 55px;
@@ -89,12 +99,8 @@
       font-size: 20px;
       font-weight: 800;
       color: #0A1C1A;
-      font-family: 'Inter', sans-serif;
-      transition: transform 0.6s ease;
     }
-    .logo-flip:hover .logo-placeholder {
-      transform: rotateY(180deg);
-    }
+
     .logo-text h1 {
       font-size: 1.6rem;
       font-weight: 800;
@@ -103,18 +109,21 @@
       margin: 0;
       line-height: 1.2;
     }
+
     .logo-text p {
       color: #D4AF37;
       font-size: 0.7rem;
       font-weight: 500;
       margin-top: 4px;
     }
+
     .nav-links {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       gap: 10px;
     }
+
     .nav-links a {
       color: #F0F0F0;
       text-decoration: none;
@@ -122,9 +131,11 @@
       font-weight: 600;
       transition: 0.2s;
     }
+
     .nav-links a:hover {
       color: var(--accent-gold);
     }
+
     .btn-primary {
       background: #D4AF37;
       color: #0A1C1A;
@@ -138,10 +149,13 @@
       cursor: pointer;
       font-size: 0.9rem;
     }
+
     .btn-primary:hover {
       background: #F5B041;
       transform: translateY(-2px);
     }
+
+    /* ================= TITLES ================= */
 
     .section-title {
       font-size: 2.5rem;
@@ -153,13 +167,14 @@
       color: #0B2B26;
     }
 
-    /* hero */
+    /* ================= HERO ================= */
+
     .hero {
       background: linear-gradient(135deg, #0F2C28 0%, #1C4A42 100%);
       color: white;
       padding: 80px 0;
-      margin-bottom: 40px;
     }
+
     .hero-grid {
       display: flex;
       justify-content: space-between;
@@ -167,25 +182,62 @@
       flex-wrap: wrap;
       gap: 40px;
     }
+
     .hero-text h2 {
       font-size: 3rem;
       font-weight: 800;
       line-height: 1.2;
     }
+
     .hero-text p {
       font-size: 1.2rem;
       margin: 20px 0 30px;
       opacity: 0.9;
     }
 
-    /* cards */
+    /* ================= VIDEO SECTION ================= */
+
+    .ues-video-section {
+      width: 100%;
+      padding: 25px 20px 35px;
+      text-align: center;
+      background: #efefea;
+    }
+
+    .ues-video-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #0B2B26;
+      margin-bottom: 15px;
+    }
+
+    .ues-video-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .ues-video-container video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ================= CARDS ================= */
+
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 32px;
       margin: 48px 0;
     }
-    .expert-card, .program-card {
+
+    .expert-card,
+    .program-card {
       background: white;
       border-radius: var(--border-radius);
       padding: 32px 24px;
@@ -194,63 +246,75 @@
       border: 1px solid #E9E2D0;
       text-align: center;
     }
-    .expert-card:hover, .program-card:hover {
+
+    .expert-card:hover,
+    .program-card:hover {
       transform: translateY(-6px);
       border-color: #D4AF37;
     }
-    
-    /* Quran Card Special Styling */
+
+    /* ================= QURAN ================= */
+
     .quran-card {
       background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%);
       color: white;
       border: none;
     }
+
     .quran-card .program-badge {
       background: #D4AF37;
       color: #0A1C1A;
     }
+
     .quran-card .program-title {
       color: white;
     }
+
     .quran-card .list-styled li::before {
       color: #D4AF37;
     }
+
     .quran-card p {
       color: #F5F5F5;
     }
-    
-    /* ===== FIXED TEAM IMAGE STYLES ===== */
+
+    /* ================= TEAM ================= */
+
     .teacher-img {
-      width: 150px;          /* fixed width */
-      height: 150px;         /* fixed height */
-      border-radius: 50%;    /* perfect circle */
-      object-fit: cover;     /* ensures image covers the box without distortion */
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
       margin-bottom: 20px;
       border: 4px solid #D4AF37;
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      background: #f0ebe0;   /* fallback background */
-      display: block;        /* remove extra space */
+      background: #f0ebe0;
+      display: block;
       margin-left: auto;
       margin-right: auto;
     }
-    
+
     .expert-name {
       font-size: 1.5rem;
       font-weight: 800;
       color: #0B2B26;
       margin-bottom: 6px;
     }
+
     .expert-title {
       color: #B8860B;
       font-weight: 700;
       margin-bottom: 14px;
       font-size: 0.95rem;
     }
+
     .expert-bio {
       color: #2C3E3A;
       line-height: 1.5;
       font-size: 0.9rem;
     }
+
+    /* ================= PROGRAMS ================= */
 
     .program-badge {
       background: #163A35;
@@ -262,22 +326,26 @@
       font-weight: 600;
       margin-bottom: 16px;
     }
+
     .program-title {
       font-size: 1.8rem;
       font-weight: 800;
       margin-bottom: 12px;
     }
+
     .list-styled {
       list-style: none;
       margin-top: 20px;
       text-align: left;
     }
+
     .list-styled li {
       margin-bottom: 12px;
       padding-left: 24px;
       position: relative;
       font-weight: 500;
     }
+
     .list-styled li::before {
       content: "▹";
       position: absolute;
@@ -292,15 +360,6 @@
       gap: 40px;
       margin: 60px 0;
     }
-    @media (max-width: 780px) {
-      .two-column { grid-template-columns: 1fr; }
-      .nav-flex { flex-direction: column; text-align: center; }
-      .brand-group { justify-content: center; }
-      .nav-links { justify-content: center; margin-top: 8px; }
-      .nav-links a { margin: 0 12px; }
-      .container { padding: 0 20px; }
-      .section-title { font-size: 2rem; }
-    }
 
     .highlight-box {
       background: #0F2C28;
@@ -309,12 +368,14 @@
       padding: 32px;
       margin: 40px 0;
     }
+
     .strategy-list {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
       margin-top: 20px;
     }
+
     .strategy-list span {
       background: rgba(212, 175, 55, 0.2);
       padding: 8px 18px;
@@ -322,17 +383,22 @@
       font-weight: 500;
     }
 
-    /* form */
+    /* ================= FORM ================= */
+
     .inquiry-form {
       background: white;
       border-radius: 32px;
       padding: 40px;
       box-shadow: var(--card-shadow);
     }
+
     .form-group {
       margin-bottom: 22px;
     }
-    input, select, textarea {
+
+    input,
+    select,
+    textarea {
       width: 100%;
       padding: 14px 18px;
       border: 1px solid #D1C9B6;
@@ -341,47 +407,24 @@
       font-size: 1rem;
       background: #FEFCF8;
     }
+
     textarea {
       border-radius: 24px;
     }
+
     label {
       font-weight: 700;
       margin-bottom: 8px;
       display: block;
       color: #0B2B26;
     }
-    .required-star:after {
+
+    .required-star::after {
       content: " *";
       color: #C62828;
     }
 
-    footer {
-      background: #0A1C1A;
-      color: #CFD8D1;
-      padding: 48px 0 32px;
-      margin-top: 60px;
-      text-align: center;
-    }
-    .footer-flex {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 30px;
-      text-align: left;
-      margin-bottom: 40px;
-    }
-    .contact-info a {
-      color: #D4AF37;
-      text-decoration: none;
-    }
-    hr {
-      border-color: #2C4B42;
-      margin: 24px 0;
-    }
-    
-    .about-text {
-      text-align: left;
-    }
+    /* ================= SCIENCE ================= */
 
     .science-grid {
       display: grid;
@@ -389,6 +432,7 @@
       gap: 20px;
       margin-top: 20px;
     }
+
     .science-card {
       background: #F5F0E1;
       padding: 20px;
@@ -397,389 +441,1361 @@
       font-weight: 700;
       color: #0B2B26;
     }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #0A1C1A;
+      color: #CFD8D1;
+      padding: 48px 0 32px;
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .footer-flex {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+
+    hr {
+      border-color: #2C4B42;
+      margin: 24px 0;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 780px) {
+
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-flex {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .brand-group {
+        justify-content: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+        margin-top: 8px;
+      }
+
+      .nav-links a {
+        margin: 0 12px;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .hero-text h2 {
+        font-size: 2.2rem;
+      }
+
+      .ues-video-section {
+        padding: 20px 15px 30px;
+      }
+
+    }
+
   </style>
 </head>
+
+
 <body>
 
-<!-- =================== NEW NAVBAR WITH LOGO ON LEFT SIDE (inline with brand) =================== -->
+
+<!-- ================= NAVBAR ================= -->
+
 <nav class="navbar">
+
   <div class="container nav-flex">
+
     <div class="brand-group">
-      <!-- Logo with flip effect (left side) -->
+
       <div class="logo-wrapper">
+
         <div class="logo-flip">
-          <img src="logo.jpg" alt="Ummah Education System Logo" class="site-logo" id="mainLogo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'logo-placeholder\'>UES</div>';">
+
+          <img
+            src="logo.jpg"
+            alt="Ummah Education System Logo"
+            class="site-logo"
+            onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'logo-placeholder\'>UES</div>';"
+          >
+
         </div>
+
       </div>
-      <!-- Brand text beside logo -->
+
       <div class="logo-text">
+
         <h1>UMMAH EDUCATION SYSTEM</h1>
+
         <p>Empowering learners across the world</p>
+
       </div>
+
     </div>
+
+
     <div class="nav-links">
+
       <a href="#about">About</a>
+
       <a href="#programs">Courses</a>
+
       <a href="#team">Experts</a>
+
       <a href="#contact">Contact</a>
-      <a href="#inquiry" class="btn-primary" style="background:#D4AF37; color:#0A1C1A; padding:8px 22px;">Enroll Now</a>
+
+      <a
+        href="#inquiry"
+        class="btn-primary"
+        style="background:#D4AF37; color:#0A1C1A; padding:8px 22px;"
+      >
+        Enroll Now
+      </a>
+
     </div>
+
   </div>
+
 </nav>
 
+
+<!-- ================= HERO ================= -->
+
 <section class="hero">
+
   <div class="container hero-grid">
+
     <div class="hero-text">
-      <h2>Expert Tutoring for <br>Quran, 11+, SATs, O/A Levels</h2>
-      <p>Online Quran with Translation | Nazra |  Edexcel OCR and AQA  | Global Classes</p>
-      <a href="#inquiry" class="btn-primary" style="background:#D4AF37; color:#0A1C1A;">Start Your Journey →</a>
+
+      <h2>
+        Expert Tutoring for
+        <br>
+        Quran, 11+, SATs, O/A Levels
+      </h2>
+
+      <p>
+        Online Quran with Translation | Nazra | Edexcel OCR and AQA | Global Classes
+      </p>
+
+      <a
+        href="#inquiry"
+        class="btn-primary"
+        style="background:#D4AF37; color:#0A1C1A;"
+      >
+        Start Your Journey →
+      </a>
+
     </div>
+
+
     <div>
-      <div style="background: rgba(255,255,240,0.1); border-radius: 40px; padding: 28px; backdrop-filter: blur(2px);">
-        <p style="font-weight: 700; font-size: 1.3rem;">Serving students across<br>all the world</p>
-        <p style="margin-top: 16px;">Flexible online tutoring | Small groups | Score improvement guarantee</p>
+
+      <div
+        style="
+          background: rgba(255,255,240,0.1);
+          border-radius: 40px;
+          padding: 28px;
+          backdrop-filter: blur(2px);
+        "
+      >
+
+        <p style="font-weight: 700; font-size: 1.3rem;">
+          Serving students across
+          <br>
+          all the world
+        </p>
+
+        <p style="margin-top: 16px;">
+          Flexible online tutoring | Small groups | Score improvement guarantee
+        </p>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
 
-<!-- About Us Section -->
-<div class="container" id="about">
-  <div style="background: white; border-radius: 32px; padding: 40px; margin: 40px 0; box-shadow: var(--card-shadow);">
-    <h2 class="section-title" style="border-left-color: #D4AF37;">About Ummah Education System</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: center;">
-      <div class="about-text" style="flex: 2;">
-        <p style="margin-bottom: 18px; line-height: 1.6;"><strong>Ummah Education System (UES)</strong> is a premier online academy dedicated to empowering Muslim learners across the world. We offer both Quranic education and academic excellence, providing world-class preparation for international examinations including  Edexcel OCR and AQA , SATs, and 11+ entrance tests.</p>
-        <p style="margin-bottom: 18px; line-height: 1.6;">Our mission is to combine expert instruction, modern digital tools, and personalized mentorship i.e., helping students excel in both worldly knowledge and religious education. At UES, we believe in nurturing critical thinking, confidence, and a lifelong love for learning.</p>
-        <p style="line-height: 1.6;">From Quran with Translation to Mathematics and Sciences, our specialized teachers ensure every student receives tailored support, regular progress tracking, and proven success strategies.</p>
-      </div>
-      <div style="flex: 1; text-align: center;">
-        <div style="background: #163A35; border-radius: 40px; padding: 40px 20px; color: white;">
-          <div style="font-size: 2.5rem; font-weight: 800;">Global</div>
-          <p style="margin-top: 8px;">Online Classroom</p>
-          <div style="font-size: 2rem; font-weight: 800; margin-top: 25px;">Expert</div>
-          <p>Faculty Team</p>
-        </div>
-      </div>
-    </div>
+
+<!-- ===================================================== -->
+<!-- ================= UES VIDEO SECTION ================= -->
+<!-- ===================================================== -->
+
+<section class="ues-video-section">
+
+  <div class="ues-video-title">
+    Discover Ummah Education System
   </div>
+
+  <div class="ues-video-container">
+
+    <video
+      controls
+      playsinline
+      preload="metadata"
+    >
+
+      <!-- ================================================= -->
+      <!-- REPLACE THE LINK BELOW WITH YOUR DIRECT MP4 LINK -->
+      <!-- ================================================= -->
+
+      <source
+        src="Ummah education.mp4.mp4"
+        type="video/mp4"
+      >
+
+      Your browser does not support the video tag.
+
+    </video>
+
+  </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<div class="container" id="about">
+
+  <div
+    style="
+      background: white;
+      border-radius: 32px;
+      padding: 40px;
+      margin: 40px 0;
+      box-shadow: var(--card-shadow);
+    "
+  >
+
+    <h2 class="section-title">
+      About Ummah Education System
+    </h2>
+
+    <div
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+        align-items: center;
+      "
+    >
+
+      <div class="about-text" style="flex: 2;">
+
+        <p style="margin-bottom: 18px; line-height: 1.6;">
+
+          <strong>Ummah Education System (UES)</strong>
+          is a premier online academy dedicated to empowering Muslim learners across the world.
+          We offer both Quranic education and academic excellence, providing world-class preparation
+          for international examinations including Edexcel OCR and AQA, SATs, and 11+ entrance tests.
+
+        </p>
+
+
+        <p style="margin-bottom: 18px; line-height: 1.6;">
+
+          Our mission is to combine expert instruction, modern digital tools,
+          and personalized mentorship, helping students excel in both worldly
+          knowledge and religious education.
+
+        </p>
+
+
+        <p style="line-height: 1.6;">
+
+          From Quran with Translation to Mathematics and Sciences,
+          our specialized teachers ensure every student receives tailored support,
+          regular progress tracking, and proven success strategies.
+
+        </p>
+
+      </div>
+
+
+      <div style="flex: 1; text-align: center;">
+
+        <div
+          style="
+            background: #163A35;
+            border-radius: 40px;
+            padding: 40px 20px;
+            color: white;
+          "
+        >
+
+          <div style="font-size: 2.5rem; font-weight: 800;">
+            Global
+          </div>
+
+          <p style="margin-top: 8px;">
+            Online Classroom
+          </p>
+
+          <div
+            style="
+              font-size: 2rem;
+              font-weight: 800;
+              margin-top: 25px;
+            "
+          >
+            Expert
+          </div>
+
+          <p>
+            Faculty Team
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
+
+
+<!-- ================= PROGRAMS ================= -->
 
 <div class="container" id="programs">
-  <!-- QURAN COURSE - TOP OF ALL COURSES -->
+
+
+  <!-- QURAN -->
+
   <div>
-    <h2 class="section-title">Holy Quran Program</h2>
-    <div class="program-card quran-card" style="margin-bottom: 32px; text-align: left;">
-      <div class="program-badge">Online Quran Tuition | All Ages Welcome</div>
-      <div class="program-title">Online Quran with Translation & Nazra</div>
-      <p><strong>Learn the Holy Quran online with qualified Qaris and teachers.</strong> Our program focuses on proper Tajweed, fluent Nazra recitation, and understanding the meaning through word-by-word translation.</p>
+
+    <h2 class="section-title">
+      Holy Quran Program
+    </h2>
+
+    <div
+      class="program-card quran-card"
+      style="margin-bottom: 32px; text-align: left;"
+    >
+
+      <div class="program-badge">
+        Online Quran Tuition | All Ages Welcome
+      </div>
+
+      <div class="program-title">
+        Online Quran with Translation & Nazra
+      </div>
+
+      <p>
+        <strong>Learn the Holy Quran online with qualified Qaris and teachers.</strong>
+        Our program focuses on proper Tajweed, fluent Nazra recitation,
+        and understanding the meaning through word-by-word translation.
+      </p>
+
+
       <div class="two-column" style="margin: 20px 0 0 0;">
+
         <div>
-          <h3 style="margin-bottom: 12px;">Course Includes:</h3>
+
+          <h3 style="margin-bottom: 12px;">
+            Course Includes:
+          </h3>
+
           <ul class="list-styled">
+
             <li>Nazra Quran (Fluency & Accuracy)</li>
+
             <li>Quran Translation (Urdu & English)</li>
+
             <li>Tajweed Rules (Makharij & Sifaat)</li>
+
             <li>Memorization (Hifz Support)</li>
+
             <li>Islamic Duas & Salah Recitation</li>
+
           </ul>
+
         </div>
+
+
         <div>
-          <p><strong>Duration:</strong> Flexible (Monthly / Custom)</p>
-          <p><strong>Levels:</strong> Beginner to Advanced</p>
-          <p><strong>Class Type:</strong> One-on-One or Small Group</p>
+
+          <p>
+            <strong>Duration:</strong>
+            Flexible (Monthly / Custom)
+          </p>
+
+          <p>
+            <strong>Levels:</strong>
+            Beginner to Advanced
+          </p>
+
+          <p>
+            <strong>Class Type:</strong>
+            One-on-One or Small Group
+          </p>
+
         </div>
+
       </div>
+
+
       <div style="margin-top: 24px;">
-        <h3>What's Included:</h3>
+
+        <h3>
+          What's Included:
+        </h3>
+
         <div class="strategy-list">
-          <span>Free trial class</span><span>Progress reports</span><span>Flexible timings</span>
-          <span>Female & Male teachers available</span><span>Monthly assessments</span>
+
+          <span>Free trial class</span>
+
+          <span>Progress reports</span>
+
+          <span>Flexible timings</span>
+
+          <span>Female & Male teachers available</span>
+
+          <span>Monthly assessments</span>
+
         </div>
+
       </div>
+
     </div>
+
   </div>
 
-  <!-- Mathematics Mastery Program -->
+
+  <!-- MATHEMATICS -->
+
   <div>
-    <h2 class="section-title">Mathematics Mastery Program</h2>
-    <div class="program-card" style="margin-bottom: 32px; text-align: left;">
-      <div class="program-badge"> Edexcel OCR and AQA.</div>
-      <div class="program-title">O Level & A Level Mathematics</div>
-      <p><strong>Complete coverage</strong> for O Level & A Level Mathematics following the Edexcel OCR and AQA Boards.</p>
+
+    <h2 class="section-title">
+      Mathematics Mastery Program
+    </h2>
+
+    <div
+      class="program-card"
+      style="margin-bottom: 32px; text-align: left;"
+    >
+
+      <div class="program-badge">
+        Edexcel OCR and AQA
+      </div>
+
+      <div class="program-title">
+        O Level & A Level Mathematics
+      </div>
+
+      <p>
+        <strong>Complete coverage</strong>
+        for O Level & A Level Mathematics following the Edexcel OCR and AQA Boards.
+      </p>
+
+
       <div class="two-column" style="margin: 20px 0 0 0;">
+
         <div>
-          <h3 style="margin-bottom: 12px;">Core Curriculum</h3>
+
+          <h3 style="margin-bottom: 12px;">
+            Core Curriculum
+          </h3>
+
           <ul class="list-styled">
+
             <li>Pure Mathematics 1-3</li>
+
             <li>Probability & Statistics</li>
+
             <li>Mechanics & Numerical Methods</li>
+
           </ul>
+
         </div>
+
+
         <div>
-          <p><strong>Duration:</strong> O Level | A Level </p>
-          <p><strong>Exam Boards:</strong>  Edexcel OCR and AQA Boards.</p>
+
+          <p>
+            <strong>Duration:</strong>
+            O Level | A Level
+          </p>
+
+          <p>
+            <strong>Exam Boards:</strong>
+            Edexcel OCR and AQA Boards
+          </p>
+
         </div>
+
       </div>
+
+
       <div style="margin-top: 24px;">
-        <h3>What's Included:</h3>
+
+        <h3>
+          What's Included:
+        </h3>
+
         <div class="strategy-list">
-          <span>Topic-wise worksheets</span><span>Past paper practice</span><span>Doubt-clearing sessions</span>
-          <span>Exam technique coaching</span><span>Mock exams</span>
+
+          <span>Topic-wise worksheets</span>
+
+          <span>Past paper practice</span>
+
+          <span>Doubt-clearing sessions</span>
+
+          <span>Exam technique coaching</span>
+
+          <span>Mock exams</span>
+
         </div>
+
       </div>
+
     </div>
+
   </div>
 
-  <!-- O/A Level Sciences Section -->
+
+  <!-- SCIENCES -->
+
   <div>
-    <h2 class="section-title">O/A Level Sciences</h2>
-    <div class="program-card" style="margin-bottom: 32px; text-align: left;">
-      <div class="program-badge"> Edexcel OCR and AQA  | Complete Science Stream</div>
-      <div class="program-title">Physics | Chemistry | Biology</div>
-      <p><strong>Comprehensive coverage</strong> for O Level and A Level Sciences following Edecel OCR and AQA Boards. Taught by subject specialists including Muhammad Mustafa for Biology.</p>
+
+    <h2 class="section-title">
+      O/A Level Sciences
+    </h2>
+
+    <div
+      class="program-card"
+      style="margin-bottom: 32px; text-align: left;"
+    >
+
+      <div class="program-badge">
+        Edexcel OCR and AQA | Complete Science Stream
+      </div>
+
+      <div class="program-title">
+        Physics | Chemistry | Biology
+      </div>
+
+      <p>
+
+        <strong>Comprehensive coverage</strong>
+        for O Level and A Level Sciences following Edexcel OCR and AQA Boards.
+        Taught by subject specialists.
+
+      </p>
+
+
       <div class="science-grid">
-        <div class="science-card">Physics<br>Mechanics, Waves, Electricity, Nuclear Physics</div>
-        <div class="science-card">Chemistry<br>Organic, Inorganic, Physical Chemistry</div>
-        <div class="science-card">Biology<br>Cell Biology, Genetics, Human Physiology, Ecology</div>
+
+        <div class="science-card">
+
+          Physics
+          <br>
+          Mechanics, Waves, Electricity, Nuclear Physics
+
+        </div>
+
+
+        <div class="science-card">
+
+          Chemistry
+          <br>
+          Organic, Inorganic, Physical Chemistry
+
+        </div>
+
+
+        <div class="science-card">
+
+          Biology
+          <br>
+          Cell Biology, Genetics, Human Physiology, Ecology
+
+        </div>
+
       </div>
+
+
       <div style="margin-top: 24px;">
-        <h3>What's Included:</h3>
+
+        <h3>
+          What's Included:
+        </h3>
+
         <div class="strategy-list">
-          <span>Lab-based conceptual teaching</span><span>Past paper practice</span><span>Doubt-clearing sessions</span>
-          <span>Practical exam preparation</span><span>Mock tests & marking</span>
+
+          <span>Lab-based conceptual teaching</span>
+
+          <span>Past paper practice</span>
+
+          <span>Doubt-clearing sessions</span>
+
+          <span>Practical exam preparation</span>
+
+          <span>Mock tests & marking</span>
+
         </div>
+
       </div>
-      <p style="margin-top: 20px;"><strong>Duration:</strong> O Level | A Level  per subject</p>
+
     </div>
+
   </div>
 
-  <!-- 11+ & SAT Excellence Program -->
+
+  <!-- 11+ AND SAT -->
+
   <div>
-    <h2 class="section-title">11+ & SATs Excellence Program</h2>
+
+    <h2 class="section-title">
+      11+ & SATs Excellence Program
+    </h2>
+
+
     <div class="card-grid">
-      <div class="program-card" style="text-align: left;">
-        <div class="program-badge">Grammar & Independent Schools</div>
-        <h3 style="font-size: 1.8rem; font-weight:800;">11+ Exam Prep</h3>
-        <ul class="list-styled">
-          <li>Verbal Reasoning</li>
-          <li>Non-Verbal Reasoning</li>
-          <li>English Comprehension</li>
-          <li>Mathematics (11+ Level)</li>
-        
-          <li>Spatial Awareness</li>
-        </ul>
-      </div>
-      <div class="program-card" style="text-align: left;">
-        <div class="program-badge">Uk & International Admissions</div>
-        <h3 style="font-size: 1.8rem; font-weight:800;">SATs Preparation</h3>
-        <ul class="list-styled">
-          <li>English</li>
-          <li>Math (Calculator & No-Calculator)</li>
-          <li>Full-Length Mock Tests</li>
-        </ul>
-      </div>
-    </div>
-  </div>
 
-  <!-- Test-Taking Strategies Highlights -->
-  <div class="highlight-box">
-    <h3 style="font-size: 2rem; font-weight: 800; margin-bottom: 12px;">Test-Taking Strategies</h3>
-    <p style="font-size: 1.1rem; margin-bottom: 24px;">Program Highlights:</p>
-    <div class="strategy-list" style="margin-bottom: 28px;">
-      <span>Personalized study plans based on target score</span>
-      <span>Weekly progress tracking & parent reports</span>
-      <span>Access to 1000+ practice questions from past papers</span>
-      <span>Flexible scheduling (weekends & evening batches)</span>
-      <span>Small group classes (max 5 students)</span>
-    </div>
-    <p><strong>Includes:</strong> Diagnostic assessment | Strategy sessions | Vocabulary building | Timed practice | Score improvement guarantee</p>
-    <p style="margin-top: 18px; font-style: italic;">*Terms apply</p>
-  </div>
-</div>
 
-<!-- Expert Team Section with Teacher Images -->
-<div class="container" id="team">
-  <h2 class="section-title">Our Expert Team</h2>
-  <div class="card-grid">
-    <div class="expert-card">
-      <img src="Safiullah Ummati.jpeg" alt="Safi Ullah Ummati" class="teacher-img" onerror="this.src='https://via.placeholder.com/150x150?text=Safi+Ullah'; this.style.objectFit='cover';">
-      <div class="expert-name"> Mr. Safi Ullah </div>
-      <div class="expert-title">CEO & Lead Educator</div>
-      <p class="expert-bio">Expert in English & exam strategies with proven success rates</p>
-    </div>
-    
-    <div class="expert-card">
-      <img src="kaleemullah.png" alt="Kaleemullah" class="teacher-img" onerror="this.src='https://via.placeholder.com/150x150?text=Kaleemullah'; this.style.objectFit='cover';">
-      <div class="expert-name">Mr. Kaleemullah</div>
-      <div class="expert-title">Operations Manager</div>
-      <p class="expert-bio">Personalized learning journeys & smooth academic coordination</p>
-    </div>
-    
-    <div class="expert-card">
-      <img src="Fakhrullah Malik.png" alt="Fakhr Ullah Malik" class="teacher-img" onerror="this.src='https://via.placeholder.com/150x150?text=Fakhr+Ullah'; this.style.objectFit='cover';">
-      <div class="expert-name">Mr. Fakhr Ullah </div>
-      <div class="expert-title">Digital Strategy Lead</div>
-      <p class="expert-bio">Building a global learning community through innovative digital platforms</p>
-    </div>
-    
-    <div class="expert-card">
-      <img src="Mustafa Wazir.jpeg" alt="Muhammad Mustafa" class="teacher-img" onerror="this.src='https://via.placeholder.com/150x150?text=Muhammad+Mustafa'; this.style.objectFit='cover';">
-      <div class="expert-name">Mr. Muhammad Mustafa</div>
-      <div class="expert-title">Office Management</div>
-      <p class="expert-bio"> Briliant Managment Skills</p>
-    </div>
-  </div>
-</div>
+      <div
+        class="program-card"
+        style="text-align: left;"
+      >
 
-<!-- Student Inquiry Form + Get in Touch Combined with WhatsApp Integration -->
-<div class="container" id="contact">
-  <div class="two-column">
-    <div>
-      <h2 class="section-title" style="border-left-color: #D4AF37;">Get in Touch</h2>
-      <div style="background: #FFFFFF; border-radius: 32px; padding: 32px; box-shadow: var(--card-shadow);">
-        <p style="font-weight: 700; font-size: 1.3rem;">Contact us for fee details & enrollment</p>
-        <p style="margin: 16px 0;"><strong>Special offers:</strong> Sibling discount | Monthly packages | Group discounts</p>
-        <div style="margin: 24px 0;">
-          <p><strong>Chat on WhatsApp Now</strong></p>
-          <p style="font-size: 1.2rem;">Call/Message: +92 325 5915747</p>
-          <p>Email: ummaheducationsystem44@gmail.com</p>
+        <div class="program-badge">
+          Grammar & Independent Schools
         </div>
-        <hr style="background:#E9E2D0;">
-        <p style="margin-top: 12px;">Serving students across world | Flexible online tutoring</p>
+
+        <h3 style="font-size: 1.8rem; font-weight:800;">
+          11+ Exam Prep
+        </h3>
+
+        <ul class="list-styled">
+
+          <li>Verbal Reasoning</li>
+
+          <li>Non-Verbal Reasoning</li>
+
+          <li>English Comprehension</li>
+
+          <li>Mathematics (11+ Level)</li>
+
+          <li>Spatial Awareness</li>
+
+        </ul>
+
       </div>
+
+
+      <div
+        class="program-card"
+        style="text-align: left;"
+      >
+
+        <div class="program-badge">
+          UK & International Admissions
+        </div>
+
+        <h3 style="font-size: 1.8rem; font-weight:800;">
+          SATs Preparation
+        </h3>
+
+        <ul class="list-styled">
+
+          <li>English</li>
+
+          <li>Math (Calculator & No-Calculator)</li>
+
+          <li>Full-Length Mock Tests</li>
+
+        </ul>
+
+      </div>
+
     </div>
+
+  </div>
+
+
+  <!-- TEST STRATEGIES -->
+
+  <div class="highlight-box">
+
+    <h3 style="font-size: 2rem; font-weight: 800; margin-bottom: 12px;">
+      Test-Taking Strategies
+    </h3>
+
+    <p style="font-size: 1.1rem; margin-bottom: 24px;">
+      Program Highlights:
+    </p>
+
+
+    <div
+      class="strategy-list"
+      style="margin-bottom: 28px;"
+    >
+
+      <span>
+        Personalized study plans based on target score
+      </span>
+
+      <span>
+        Weekly progress tracking & parent reports
+      </span>
+
+      <span>
+        Access to 1000+ practice questions from past papers
+      </span>
+
+      <span>
+        Flexible scheduling
+      </span>
+
+      <span>
+        Small group classes
+      </span>
+
+    </div>
+
+
+    <p>
+
+      <strong>Includes:</strong>
+      Diagnostic assessment | Strategy sessions |
+      Vocabulary building | Timed practice |
+      Score improvement guarantee
+
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- ================= TEAM ================= -->
+
+<div class="container" id="team">
+
+  <h2 class="section-title">
+    Our Expert Team
+  </h2>
+
+
+  <div class="card-grid">
+
+
+    <div class="expert-card">
+
+      <img
+        src="Safiullah Ummati.jpeg"
+        alt="Safi Ullah Ummati"
+        class="teacher-img"
+      >
+
+      <div class="expert-name">
+        Mr. Safi Ullah
+      </div>
+
+      <div class="expert-title">
+        CEO & Lead Educator
+      </div>
+
+      <p class="expert-bio">
+        Expert in English & exam strategies with proven success rates
+      </p>
+
+    </div>
+
+
+    <div class="expert-card">
+
+      <img
+        src="kaleemullah.png"
+        alt="Kaleemullah"
+        class="teacher-img"
+      >
+
+      <div class="expert-name">
+        Mr. Kaleemullah
+      </div>
+
+      <div class="expert-title">
+        Operations Manager
+      </div>
+
+      <p class="expert-bio">
+        Personalized learning journeys & smooth academic coordination
+      </p>
+
+    </div>
+
+
+    <div class="expert-card">
+
+      <img
+        src="Fakhrullah Malik.png"
+        alt="Fakhr Ullah Malik"
+        class="teacher-img"
+      >
+
+      <div class="expert-name">
+        Mr. Fakhr Ullah
+      </div>
+
+      <div class="expert-title">
+        Digital Strategy Lead
+      </div>
+
+      <p class="expert-bio">
+        Building a global learning community through innovative digital platforms
+      </p>
+
+    </div>
+
+
+    <div class="expert-card">
+
+      <img
+        src="Mustafa Wazir.jpeg"
+        alt="Muhammad Mustafa"
+        class="teacher-img"
+      >
+
+      <div class="expert-name">
+        Mr. Muhammad Mustafa
+      </div>
+
+      <div class="expert-title">
+        Educational Advisor
+      </div>
+
+      <p class="expert-bio">
+        Brilliant Management Skills
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ================= CONTACT ================= -->
+
+<div class="container" id="contact">
+
+  <div class="two-column">
+
+
+    <div>
+
+      <h2
+        class="section-title"
+        style="border-left-color: #D4AF37;"
+      >
+        Get in Touch
+      </h2>
+
+
+      <div
+        style="
+          background: #FFFFFF;
+          border-radius: 32px;
+          padding: 32px;
+          box-shadow: var(--card-shadow);
+        "
+      >
+
+        <p style="font-weight: 700; font-size: 1.3rem;">
+          Contact us for fee details & enrollment
+        </p>
+
+        <p style="margin: 16px 0;">
+
+          <strong>Special offers:</strong>
+          Sibling discount | Monthly packages | Group discounts
+
+        </p>
+
+
+        <div style="margin: 24px 0;">
+
+          <p>
+            <strong>Chat on WhatsApp Now</strong>
+          </p>
+
+          <p style="font-size: 1.2rem;">
+            Call/Message: +92 325 5915747
+          </p>
+
+          <p>
+            Email: ummaheducationsystem44@gmail.com
+          </p>
+
+        </div>
+
+
+        <hr>
+
+
+        <p style="margin-top: 12px;">
+          Serving students across world | Flexible online tutoring
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- INQUIRY FORM -->
 
     <div id="inquiry">
-      <h2 class="section-title" style="border-left-color: #D4AF37;">Student Inquiry Form</h2>
+
+      <h2
+        class="section-title"
+        style="border-left-color: #D4AF37;"
+      >
+        Student Inquiry Form
+      </h2>
+
+
       <div class="inquiry-form">
+
         <form id="contactForm">
+
+
           <div class="form-group">
-            <label class="required-star">Full Name</label>
-            <input type="text" id="fullName" required placeholder="Enter your full name">
+
+            <label class="required-star">
+              Full Name
+            </label>
+
+            <input
+              type="text"
+              id="fullName"
+              required
+              placeholder="Enter your full name"
+            >
+
           </div>
+
+
           <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" id="emailAddress" placeholder="you@example.com">
+
+            <label>
+              Email Address
+            </label>
+
+            <input
+              type="email"
+              id="emailAddress"
+              placeholder="you@example.com"
+            >
+
           </div>
+
+
           <div class="form-group">
-            <label class="required-star">WhatsApp Number</label>
-            <input type="tel" id="whatsappNumber" required placeholder="+92 XXX XXXXXXX">
+
+            <label class="required-star">
+              WhatsApp Number
+            </label>
+
+            <input
+              type="tel"
+              id="whatsappNumber"
+              required
+              placeholder="+92 XXX XXXXXXX"
+            >
+
           </div>
+
+
           <div class="form-group">
-            <label class="required-star">Select Program Interest</label>
+
+            <label class="required-star">
+              Select Program Interest
+            </label>
+
             <select id="programInterest" required>
-              <option value="">-- Choose program --</option>
-              <option>Quran with Translation & Nazra</option>
-              <option>O Level Mathematics</option>
-              <option>A Level Mathematics</option>
-              <option>O Level Physics</option>
-              <option>A Level Physics</option>
-              <option>O Level Chemistry</option>
-              <option>A Level Chemistry</option>
-              <option>O Level Biology</option>
-              <option>A Level Biology</option>
-              <option>11+ Exam Preparation</option>
-              <option>SAT Preparation</option>
-              <option>Multiple Subjects / Custom Package</option>
+
+              <option value="">
+                -- Choose program --
+              </option>
+
+              <option>
+                Quran with Translation & Nazra
+              </option>
+
+              <option>
+                O Level Mathematics
+              </option>
+
+              <option>
+                A Level Mathematics
+              </option>
+
+              <option>
+                O Level Physics
+              </option>
+
+              <option>
+                A Level Physics
+              </option>
+
+              <option>
+                O Level Chemistry
+              </option>
+
+              <option>
+                A Level Chemistry
+              </option>
+
+              <option>
+                O Level Biology
+              </option>
+
+              <option>
+                A Level Biology
+              </option>
+
+              <option>
+                11+ Exam Preparation
+              </option>
+
+              <option>
+                SAT Preparation
+              </option>
+
+              <option>
+                Multiple Subjects / Custom Package
+              </option>
+
             </select>
+
           </div>
+
+
           <div class="form-group">
-            <label>Your questions or preferred class timings...</label>
-            <textarea id="studentMessage" rows="3" placeholder="e.g., evening batches, weekend availability, specific topics..."></textarea>
+
+            <label>
+              Your questions or preferred class timings...
+            </label>
+
+            <textarea
+              id="studentMessage"
+              rows="3"
+              placeholder="e.g., evening batches, weekend availability, specific topics..."
+            ></textarea>
+
           </div>
-          <button type="submit" class="btn-primary" style="width:100%; background:#0B2B26; color: white; border: none; font-weight: 800;">Submit Inquiry → Send to WhatsApp</button>
-          <p style="margin-top: 18px; font-size: 0.85rem; text-align: center;">Your inquiry will be sent directly to our admissions team on WhatsApp</p>
+
+
+          <button
+            type="submit"
+            class="btn-primary"
+            style="
+              width:100%;
+              background:#0B2B26;
+              color:white;
+              border:none;
+              font-weight:800;
+            "
+          >
+
+            Submit Inquiry → Send to WhatsApp
+
+          </button>
+
+
+          <p
+            style="
+              margin-top: 18px;
+              font-size: 0.85rem;
+              text-align: center;
+            "
+          >
+
+            Your inquiry will be sent directly to our admissions team on WhatsApp
+
+          </p>
+
         </form>
+
       </div>
+
     </div>
+
   </div>
+
 </div>
 
-<!-- additional small section -->
+
+<!-- ================= ADDITIONAL SECTION ================= -->
+
 <div class="container">
-  <div style="background: #F5F0E1; border-radius: 32px; padding: 32px; margin: 40px 0;">
-    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center;">
+
+  <div
+    style="
+      background: #F5F0E1;
+      border-radius: 32px;
+      padding: 32px;
+      margin: 40px 0;
+    "
+  >
+
+    <div
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+      "
+    >
+
       <div>
-        <h3 style="font-size: 1.8rem; font-weight: 800;">Quran & Academic Excellence Together</h3>
-        <p style="margin-top: 10px;">Online Quran with Translation | Nazra | O/A Levels | 11+ | SATs | Personalized Learning</p>
+
+        <h3 style="font-size: 1.8rem; font-weight: 800;">
+          Quran & Academic Excellence Together
+        </h3>
+
+        <p style="margin-top: 10px;">
+          Online Quran with Translation | Nazra |
+          O/A Levels | 11+ | SATs | Personalized Learning
+        </p>
+
       </div>
-      <a href="#inquiry" class="btn-primary" style="background:#0B2B26; color:white;">Get Started →</a>
+
+
+      <a
+        href="#inquiry"
+        class="btn-primary"
+        style="background:#0B2B26; color:white;"
+      >
+        Get Started →
+      </a>
+
     </div>
+
   </div>
+
 </div>
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
+
   <div class="container">
+
     <div class="footer-flex">
+
+
       <div>
-        <h3 style="color:#D4AF37;">Ummah Education System</h3>
-        <p>Empowering Muslim learners globally</p>
-        <p>© 2025 Ummah Education System — Empowering Muslim learners globally</p>
+
+        <h3 style="color:#D4AF37;">
+          Ummah Education System
+        </h3>
+
+        <p>
+          Empowering Muslim learners globally
+        </p>
+
+        <p>
+          © 2025 Ummah Education System —
+          Empowering Muslim learners globally
+        </p>
+
       </div>
-      <div class="contact-info">
-        <p><strong>Quick Contact</strong></p>
-        <p>+92 325 5915747</p>
-        <p>ummaheducationsystem44@gmail.com</p>
-        <p>WhatsApp Available</p>
-      </div>
+
+
       <div>
-        <p><strong>Follow & Learn</strong></p>
-        <p>Serving students across all the world</p>
-        <p>Flexible online tutoring | Small groups | Expert faculty</p>
+
+        <p>
+          <strong>Quick Contact</strong>
+        </p>
+
+        <p>
+          +92 325 5915747
+        </p>
+
+        <p>
+          ummaheducationsystem44@gmail.com
+        </p>
+
+        <p>
+          WhatsApp Available
+        </p>
+
       </div>
+
+
+      <div>
+
+        <p>
+          <strong>Follow & Learn</strong>
+        </p>
+
+        <p>
+          Serving students across all the world
+        </p>
+
+        <p>
+          Flexible online tutoring | Small groups | Expert faculty
+        </p>
+
+      </div>
+
     </div>
+
+
     <hr>
-    <p style="font-size: 0.8rem;">All trademarks and exam board references are property of their respective owners. Ummah Education System provides preparatory tutoring services.</p>
+
+
+    <p style="font-size: 0.8rem;">
+
+      All trademarks and exam board references are property
+      of their respective owners. Ummah Education System
+      provides preparatory tutoring services.
+
+    </p>
+
   </div>
+
 </footer>
 
+
+<!-- ================= JAVASCRIPT ================= -->
+
 <script>
+
   const WHATSAPP_NUMBER = "923255915747";
-  
+
   const form = document.getElementById('contactForm');
-  if(form) {
+
+  if (form) {
+
     form.addEventListener('submit', function(e) {
+
       e.preventDefault();
-      
-      const fullName = document.getElementById('fullName').value.trim();
-      const email = document.getElementById('emailAddress').value.trim();
-      const whatsapp = document.getElementById('whatsappNumber').value.trim();
-      const program = document.getElementById('programInterest').value;
-      const message = document.getElementById('studentMessage').value.trim();
-      
-      if(!fullName) {
+
+
+      const fullName =
+        document.getElementById('fullName').value.trim();
+
+      const email =
+        document.getElementById('emailAddress').value.trim();
+
+      const whatsapp =
+        document.getElementById('whatsappNumber').value.trim();
+
+      const program =
+        document.getElementById('programInterest').value;
+
+      const message =
+        document.getElementById('studentMessage').value.trim();
+
+
+      if (!fullName) {
+
         alert('Please enter your Full Name');
+
         return;
+
       }
-      if(!whatsapp) {
+
+
+      if (!whatsapp) {
+
         alert('Please enter your WhatsApp Number');
+
         return;
+
       }
-      if(!program) {
+
+
+      if (!program) {
+
         alert('Please select a Program Interest');
+
         return;
+
       }
-      
-      let adminMessage = `📚 *NEW STUDENT INQUIRY* 📚\n\n`;
-      adminMessage += `*Name:* ${fullName}\n`;
-      adminMessage += `*Email:* ${email || 'Not provided'}\n`;
-      adminMessage += `*WhatsApp:* ${whatsapp}\n`;
-      adminMessage += `*Program Interest:* ${program}\n`;
-      if(message) {
-        adminMessage += `*Message / Timings:* ${message}\n`;
+
+
+      let adminMessage =
+        `📚 *NEW STUDENT INQUIRY* 📚\n\n`;
+
+      adminMessage +=
+        `*Name:* ${fullName}\n`;
+
+      adminMessage +=
+        `*Email:* ${email || 'Not provided'}\n`;
+
+      adminMessage +=
+        `*WhatsApp:* ${whatsapp}\n`;
+
+      adminMessage +=
+        `*Program Interest:* ${program}\n`;
+
+
+      if (message) {
+
+        adminMessage +=
+          `*Message / Timings:* ${message}\n`;
+
       }
-      adminMessage += `\n_Submitted via Ummah Education System Website_`;
-      
-      const encodedMessage = encodeURIComponent(adminMessage);
-      const whatsappAdminUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
-      
-      alert(`Jazakallah Khair, ${fullName}! Your inquiry has been prepared. You will now be redirected to WhatsApp to send your details to our admissions team.`);
-      
-      window.open(whatsappAdminUrl, '_blank');
+
+
+      adminMessage +=
+        `\n_Submitted via Ummah Education System Website_`;
+
+
+      const encodedMessage =
+        encodeURIComponent(adminMessage);
+
+
+      const whatsappAdminUrl =
+        `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+
+      alert(
+        `Jazakallah Khair, ${fullName}! Your inquiry has been prepared. You will now be redirected to WhatsApp to send your details to our admissions team.`
+      );
+
+
+      window.open(
+        whatsappAdminUrl,
+        '_blank'
+      );
+
+
       form.reset();
+
     });
+
   }
+
 </script>
+
+
 </body>
 </html>
+```
