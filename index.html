@@ -168,461 +168,457 @@
 
     /* ================= HERO ================= */
 
-    /* ================= HERO ================= */
-
-.hero {
-  position: relative;
-
-  /* Background image from your website folder */
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(11, 43, 38, 0.72) 0%,
-      rgba(11, 43, 38, 0.55) 45%,
-      rgba(11, 43, 38, 0.25) 100%
-    ),
-    url("ues team.jpeg");
-
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  color: white;
-  padding: 90px 0;
-  min-height: 520px;
-
-  display: flex;
-  align-items: center;
-
-  overflow: hidden;
-}
-
-/* Soft overlay */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background: rgba(0, 0, 0, 0.08);
-
-  pointer-events: none;
-}
-
-/* Keep content above background */
-.hero .container {
-  position: relative;
-  z-index: 1;
-}
-
-/* Hero layout */
-.hero-grid {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-/* Hero text */
-.hero-text {
-  max-width: 850px;
-}
-
-/* Main heading */
-.hero-text h2 {
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1.2;
-
-  margin: 0 0 20px;
-}
-
-/* Description */
-.hero-text p {
-  font-size: 1.2rem;
-  line-height: 1.7;
-
-  margin: 20px 0 30px;
-
-  opacity: 0.95;
-}
-
-/* Programs container */
-.hero-programs {
-  margin-top: 22px;
-  max-width: 850px;
-}
-
-/* Individual program card */
-.hero-program {
-  background: rgba(255, 255, 255, 0.13);
-
-  border: 1px solid rgba(255, 255, 255, 0.25);
-
-  border-radius: 18px;
-
-  padding: 16px 20px;
-
-  margin: 14px 0;
-
-  /* Glass effect */
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-}
-
-/* Program title */
-.hero-program h3 {
-  color: #D4AF37;
-
-  font-size: 1.25rem;
-
-  margin: 0 0 5px;
-
-  font-weight: 700;
-}
-
-/* Program description */
-.hero-program p {
-  margin: 0;
-
-  font-size: 1rem;
-
-  line-height: 1.7;
-
-  opacity: 1;
-}
-
-
-
-/* ================= ADVANCED HERO ANIMATIONS ================= */
-
-/* Slow cinematic movement on the hero background */
-.hero {
-  isolation: isolate;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: -6%;
-  z-index: -1;
-  background: inherit;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  animation: heroBackgroundZoom 14s ease-in-out infinite alternate;
-  transform-origin: center;
-}
-
-/* Animated light sweep */
-.hero::before {
-  background:
-    radial-gradient(circle at 15% 30%, rgba(212,175,55,0.16), transparent 30%),
-    linear-gradient(120deg, rgba(255,255,255,0.03), transparent 45%, rgba(212,175,55,0.08));
-  animation: heroGlow 7s ease-in-out infinite alternate;
-}
-
-/* Entrance animation for hero content */
-.hero-text {
-  animation: heroTextIn 0.9s cubic-bezier(.22,1,.36,1) both;
-}
-
-.hero-text h2 {
-  animation: heroHeadingIn 0.8s 0.12s cubic-bezier(.22,1,.36,1) both;
-}
-
-/* Program cards appear one after another */
-.hero-program {
-  opacity: 0;
-  transform: translateY(24px);
-  animation: heroCardIn 0.7s cubic-bezier(.22,1,.36,1) forwards;
-  transition:
-    transform 0.35s cubic-bezier(.22,1,.36,1),
-    background 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
-}
-
-.hero-program:nth-child(1) { animation-delay: 0.25s; }
-.hero-program:nth-child(2) { animation-delay: 0.42s; }
-.hero-program:nth-child(3) { animation-delay: 0.59s; }
-
-.hero-program:hover {
-  transform: translateY(-7px) scale(1.015);
-  background: rgba(255,255,255,0.18);
-  border-color: rgba(212,175,55,0.75);
-  box-shadow: 0 16px 35px rgba(0,0,0,0.20);
-}
-
-.hero-program h3 {
-  transition: letter-spacing 0.3s ease, color 0.3s ease;
-}
-
-.hero-program:hover h3 {
-  letter-spacing: 0.4px;
-  color: #F5B041;
-}
-
-/* CTA entrance + premium hover */
-.hero-text > .btn-primary {
-  opacity: 0;
-  animation: heroButtonIn 0.7s 0.82s cubic-bezier(.22,1,.36,1) forwards;
-  transition: all 0.35s cubic-bezier(.22,1,.36,1);
-  box-shadow: 0 8px 24px rgba(212,175,55,0.20);
-}
-
-.hero-text > .btn-primary:hover {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 14px 32px rgba(212,175,55,0.34);
-}
-
-/* Right-side "Serving students..." panel */
-.hero-grid > div:last-child {
-  opacity: 0;
-  animation: heroSideIn 0.9s 0.5s cubic-bezier(.22,1,.36,1) forwards;
-}
-
-.hero-grid > div:last-child > div {
-  transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
-  animation: heroFloat 4s ease-in-out 1.4s infinite;
-}
-
-.hero-grid > div:last-child > div:hover {
-  transform: translateY(-6px);
-  background: rgba(255,255,240,0.16) !important;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
-}
-
-/* Subtle gold line moving across the bottom of the hero */
-.hero {
-  border-bottom: 1px solid rgba(212,175,55,0.18);
-}
-
-.hero .container::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -22px;
-  width: 110px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
-  animation: heroLine 3s ease-in-out infinite;
-  opacity: 0.8;
-}
-
-@keyframes heroBackgroundZoom {
-  0%   { transform: scale(1.00); }
-  100% { transform: scale(1.08); }
-}
-
-@keyframes heroGlow {
-  0%   { opacity: 0.65; transform: translateX(-1%); }
-  100% { opacity: 1; transform: translateX(1%); }
-}
-
-@keyframes heroTextIn {
-  from { opacity: 0; transform: translateX(-45px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes heroHeadingIn {
-  from { opacity: 0; transform: translateY(22px); filter: blur(5px); }
-  to   { opacity: 1; transform: translateY(0); filter: blur(0); }
-}
-
-@keyframes heroCardIn {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes heroButtonIn {
-  from { opacity: 0; transform: translateY(18px) scale(0.96); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-@keyframes heroSideIn {
-  from { opacity: 0; transform: translateX(35px) scale(0.96); }
-  to   { opacity: 1; transform: translateX(0) scale(1); }
-}
-
-@keyframes heroFloat {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-8px); }
-}
-
-@keyframes heroLine {
-  0%, 100% { transform: translateX(0); opacity: 0.25; }
-  50%      { transform: translateX(220px); opacity: 1; }
-}
-
-/* Respect accessibility preferences */
-@media (prefers-reduced-motion: reduce) {
-  .hero::after,
-  .hero::before,
-  .hero-text,
-  .hero-text h2,
-  .hero-program,
-  .hero-text > .btn-primary,
-  .hero-grid > div:last-child,
-  .hero-grid > div:last-child > div,
-  .hero .container::after {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-    filter: none !important;
-  }
-}
-
-/* Mobile refinement */
-@media (max-width: 768px) {
-  .hero::after {
-    animation-duration: 18s;
-  }
-
-  .hero-grid > div:last-child {
-    width: 100%;
-  }
-
-  .hero-grid > div:last-child > div {
-    animation-duration: 5s;
-  }
-}
-
-/* ================= HERO BUTTONS ================= */
-
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-
-  flex-wrap: wrap;
-
-  margin-top: 25px;
-}
-
-.hero-buttons a {
-  display: inline-block;
-
-  padding: 13px 25px;
-
-  border-radius: 8px;
-
-  text-decoration: none;
-
-  font-weight: 700;
-
-  transition: all 0.3s ease;
-}
-
-.hero-btn-primary {
-  background: #D4AF37;
-  color: #0B2B26;
-}
-
-.hero-btn-primary:hover {
-  background: #ffffff;
-  color: #0B2B26;
-
-  transform: translateY(-2px);
-}
-
-.hero-btn-secondary {
-  background: rgba(255, 255, 255, 0.12);
-
-  color: white;
-
-  border: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-.hero-btn-secondary:hover {
-  background: white;
-  color: #0B2B26;
-
-  transform: translateY(-2px);
-}
-
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 768px) {
-
-  .hero {
-    padding: 70px 20px;
-    min-height: 600px;
-
-    background-position: center;
-  }
-
-  .hero-grid {
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 25px;
-  }
-
-  .hero-text {
-    max-width: 100%;
-  }
-
-  .hero-text h2 {
-    font-size: 2.2rem;
-  }
-
-  .hero-text p {
-    font-size: 1rem;
-  }
-
-  .hero-programs {
-    width: 100%;
-  }
-
-  .hero-program {
-    padding: 15px 17px;
-  }
-
-  .hero-program h3 {
-    font-size: 1.1rem;
-  }
-
-  .hero-program p {
-    font-size: 0.95rem;
-  }
-
-  .hero-buttons {
-    width: 100%;
-  }
-
-  .hero-buttons a {
-    text-align: center;
-    width: 100%;
-  }
-}
-
-
-/* ================= SMALL MOBILE ================= */
-
-@media (max-width: 480px) {
-
-  .hero {
-    padding: 60px 15px;
-  }
-
-  .hero-text h2 {
-    font-size: 1.9rem;
-  }
-
-  .hero-text p {
-    font-size: 0.95rem;
-  }
-
-  .hero-program {
-    border-radius: 14px;
-  }
-}
+    .hero {
+      position: relative;
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(11, 43, 38, 0.78) 0%,
+          rgba(11, 43, 38, 0.55) 45%,
+          rgba(11, 43, 38, 0.25) 100%
+        ),
+        url("ues team.jpeg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: white;
+      padding: 90px 0 80px;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      isolation: isolate;
+      border-bottom: 2px solid rgba(212, 175, 55, 0.15);
+    }
+
+    /* === SCROLLING ANNOUNCEMENT BAR === */
+    .hero-announcement {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(135deg, #0d2b26, #1a4a42, #0d2b26);
+      padding: 12px 0;
+      overflow: hidden;
+      z-index: 10;
+      border-bottom: 2px solid #D4AF37;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.35);
+    }
+
+    .announcement-track {
+      display: flex;
+      white-space: nowrap;
+      animation: scrollAnnouncement 25s linear infinite;
+      width: max-content;
+    }
+
+    .announcement-text {
+      display: inline-block;
+      padding: 0 50px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .discount-highlight {
+      color: #F5B041;
+      font-weight: 800;
+      text-shadow: 0 0 25px rgba(245, 176, 65, 0.3);
+      animation: pulseDiscount 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulseDiscount {
+      0%, 100% { color: #F5B041; transform: scale(1); }
+      50% { color: #D4AF37; transform: scale(1.05); }
+    }
+
+    @keyframes scrollAnnouncement {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .hero-announcement:hover .announcement-track {
+      animation-play-state: paused;
+    }
+
+    /* === SOFT OVERLAY === */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(212, 175, 55, 0.08), transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(212, 175, 55, 0.04), transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+      animation: heroGlow 7s ease-in-out infinite alternate;
+    }
+
+    @keyframes heroGlow {
+      0% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+
+    /* === CINEMATIC BACKGROUND ZOOM === */
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: -8%;
+      z-index: -1;
+      background: inherit;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      animation: heroBackgroundZoom 16s ease-in-out infinite alternate;
+      transform-origin: center;
+    }
+
+    @keyframes heroBackgroundZoom {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.10); }
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    .hero-text {
+      max-width: 850px;
+      animation: heroTextIn 0.9s cubic-bezier(.22, 1, .36, 1) both;
+    }
+
+    @keyframes heroTextIn {
+      from { opacity: 0; transform: translateX(-45px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .hero-heading {
+      font-size: 3.4rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin: 0 0 20px;
+      animation: heroHeadingIn 0.8s 0.12s cubic-bezier(.22, 1, .36, 1) both;
+      position: relative;
+      display: inline-block;
+    }
+
+    @keyframes heroHeadingIn {
+      from { opacity: 0; transform: translateY(22px); filter: blur(5px); }
+      to { opacity: 1; transform: translateY(0); filter: blur(0); }
+    }
+
+    .hero-highlight {
+      background: linear-gradient(135deg, #D4AF37, #F5B041, #D4AF37);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmerGold 3s ease-in-out infinite;
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      transition: all 0.4s ease;
+    }
+
+    .hero-highlight:hover {
+      animation: shimmerGold 1s ease-in-out infinite;
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.3));
+    }
+
+    .hero-highlight::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #D4AF37, #F5B041);
+      border-radius: 4px;
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: underlineSlide 1s 0.6s cubic-bezier(.22, 1, .36, 1) forwards;
+      transition: all 0.4s ease;
+    }
+
+    .hero-highlight:hover::after {
+      transform: scaleX(1.2);
+      height: 6px;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    }
+
+    @keyframes shimmerGold {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    @keyframes underlineSlide {
+      to { transform: scaleX(1); }
+    }
+
+    .hero-programs {
+      margin-top: 22px;
+      max-width: 850px;
+    }
+
+    .hero-program {
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 18px;
+      padding: 16px 22px;
+      margin: 14px 0;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+      opacity: 0;
+      transform: translateY(24px);
+      animation: heroCardIn 0.7s cubic-bezier(.22, 1, .36, 1) forwards;
+      transition: all 0.4s cubic-bezier(.22, 1, .36, 1);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-program::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.06), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+
+    .hero-program:hover::before {
+      transform: translateX(100%);
+    }
+
+    .hero-program:nth-child(1) { animation-delay: 0.2s; }
+    .hero-program:nth-child(2) { animation-delay: 0.38s; }
+    .hero-program:nth-child(3) { animation-delay: 0.56s; }
+
+    @keyframes heroCardIn {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-program:hover {
+      transform: translateY(-7px) scale(1.015);
+      background: rgba(255, 255, 255, 0.18);
+      border-color: rgba(212, 175, 55, 0.6);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.20);
+    }
+
+    .hero-program h3 {
+      color: #D4AF37;
+      font-size: 1.15rem;
+      margin: 0 0 5px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+
+    .hero-program:hover h3 {
+      color: #F5B041;
+      letter-spacing: 0.5px;
+      transform: translateX(4px);
+    }
+
+    .hero-program p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      opacity: 0.9;
+      transition: all 0.3s ease;
+    }
+
+    .hero-program:hover p {
+      opacity: 1;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .hero-buttons a {
+      display: inline-block;
+      padding: 14px 30px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.35s cubic-bezier(.22, 1, .36, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-btn-primary {
+      background: linear-gradient(135deg, #D4AF37, #F5B041);
+      color: #0B2B26;
+      box-shadow: 0 6px 24px rgba(212, 175, 55, 0.3);
+      animation: heroButtonIn 0.7s 0.8s cubic-bezier(.22, 1, .36, 1) forwards;
+      opacity: 0;
+    }
+
+    @keyframes heroButtonIn {
+      from { opacity: 0; transform: translateY(18px) scale(0.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .hero-btn-primary .btn-shimmer {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+
+    .hero-btn-primary:hover .btn-shimmer {
+      transform: translateX(100%);
+    }
+
+    .hero-btn-primary:hover {
+      transform: translateY(-4px) scale(1.04);
+      box-shadow: 0 12px 40px rgba(212, 175, 55, 0.5);
+      background: linear-gradient(135deg, #F5B041, #D4AF37);
+    }
+
+    .hero-btn-primary:active {
+      transform: scale(0.97);
+    }
+
+    .hero-btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(4px);
+      animation: heroButtonIn 0.7s 1s cubic-bezier(.22, 1, .36, 1) forwards;
+      opacity: 0;
+    }
+
+    .hero-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.18);
+      transform: translateY(-4px);
+      border-color: #D4AF37;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-side-panel {
+      background: rgba(255, 255, 240, 0.08);
+      border-radius: 40px;
+      padding: 32px 28px;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      opacity: 0;
+      animation: heroSideIn 0.9s 0.5s cubic-bezier(.22, 1, .36, 1) forwards;
+      transition: all 0.4s cubic-bezier(.22, 1, .36, 1);
+      max-width: 350px;
+      min-width: 280px;
+    }
+
+    @keyframes heroSideIn {
+      from { opacity: 0; transform: translateX(35px) scale(0.96); }
+      to { opacity: 1; transform: translateX(0) scale(1); }
+    }
+
+    .hero-side-panel:hover {
+      transform: translateY(-6px) scale(1.02);
+      background: rgba(255, 255, 240, 0.14);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+      border-color: rgba(212, 175, 55, 0.2);
+    }
+
+    .side-panel-icon {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+      animation: floatIcon 4s ease-in-out infinite;
+    }
+
+    @keyframes floatIcon {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(5deg); }
+    }
+
+    .side-panel-title {
+      font-weight: 700;
+      font-size: 1.4rem;
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+
+    .side-panel-highlight {
+      color: #D4AF37;
+    }
+
+    .side-panel-features {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 16px 0 20px;
+    }
+
+    .side-panel-features span {
+      font-size: 0.9rem;
+      opacity: 0.85;
+      transition: all 0.3s ease;
+      padding: 4px 0;
+    }
+
+    .side-panel-features span:hover {
+      opacity: 1;
+      transform: translateX(4px);
+      color: #D4AF37;
+    }
+
+    .side-panel-badge {
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      padding: 10px 16px;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #D4AF37;
+      margin-top: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .side-panel-badge:hover {
+      background: rgba(212, 175, 55, 0.25);
+      transform: scale(1.02);
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.1);
+    }
+
+    .hero .container::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -22px;
+      width: 110px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+      animation: heroLine 3s ease-in-out infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes heroLine {
+      0%, 100% { transform: translateX(0); opacity: 0.25; }
+      50% { transform: translateX(220px); opacity: 1; }
+    }
 
     /* ================= VIDEO SECTION ================= */
 
@@ -942,22 +938,128 @@
         font-size: 2rem;
       }
 
-      .hero-text h2 {
-        font-size: 2.2rem;
-      }
-
-      .hero-program {
-        padding: 14px 16px;
-      }
-
-      .hero-program p {
-        font-size: 0.92rem;
-      }
-
       .ues-video-section {
         padding: 20px 15px 30px;
       }
 
+      .hero {
+        padding: 80px 20px 60px;
+        min-height: 600px;
+      }
+
+      .hero-grid {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+      }
+
+      .hero-text {
+        max-width: 100%;
+      }
+
+      .hero-heading {
+        font-size: 2.4rem;
+      }
+
+      .hero-text p {
+        font-size: 1rem;
+      }
+
+      .hero-programs {
+        width: 100%;
+      }
+
+      .hero-program {
+        padding: 15px 17px;
+      }
+
+      .hero-program h3 {
+        font-size: 1.05rem;
+      }
+
+      .hero-program p {
+        font-size: 0.88rem;
+      }
+
+      .hero-buttons {
+        width: 100%;
+      }
+
+      .hero-buttons a {
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-side-panel {
+        width: 100%;
+        max-width: 100%;
+        min-width: auto;
+        padding: 24px 20px;
+      }
+
+      .side-panel-features span {
+        font-size: 0.85rem;
+      }
+
+      .announcement-text {
+        font-size: 0.75rem;
+        padding: 0 30px;
+      }
+
+      .hero-announcement {
+        padding: 8px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 70px 15px 50px;
+      }
+
+      .hero-heading {
+        font-size: 1.9rem;
+      }
+
+      .hero-program {
+        padding: 12px 14px;
+        border-radius: 14px;
+      }
+
+      .hero-program h3 {
+        font-size: 0.95rem;
+      }
+
+      .hero-program p {
+        font-size: 0.8rem;
+      }
+
+      .announcement-text {
+        font-size: 0.65rem;
+        padding: 0 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero::after,
+      .hero::before,
+      .hero-text,
+      .hero-heading,
+      .hero-program,
+      .hero-buttons a,
+      .hero-side-panel,
+      .hero .container::after,
+      .announcement-track,
+      .side-panel-icon {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+      }
+      
+      .hero-announcement:hover .announcement-track {
+        animation-play-state: running;
+      }
     }
 
   </style>
@@ -985,7 +1087,6 @@
             class="site-logo"
             onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'logo-placeholder\'>UES</div>';"
           >
-
 
         </div>
 
@@ -1029,74 +1130,94 @@
 
 <!-- ================= HERO ================= -->
 
-<!-- Replace team-photo.jpg with your actual team group photo file or image URL. -->
 <section class="hero">
+
+  <!-- SCROLLING ANNOUNCEMENT BAR -->
+  <div class="hero-announcement">
+    <div class="announcement-track">
+      <span class="announcement-text">
+        EXCELLENCE IN EDUCATION — ADMISSIONS OPEN FOR 11+ PREPARATION, SATs, GCSE, IGCSE, O LEVEL & A LEVEL PROGRAMS. 
+        <span class="discount-highlight">EARLY BIRD OFFER: 25% DISCOUNT</span> ON ALL COURSES. 
+        LIMITED SEATS AVAILABLE — REGISTER TODAY TO SECURE YOUR PLACE.
+      </span>
+      <span class="announcement-text">
+        EXCELLENCE IN EDUCATION — ADMISSIONS OPEN FOR 11+ PREPARATION, SATs, GCSE, IGCSE, O LEVEL & A LEVEL PROGRAMS. 
+        <span class="discount-highlight">EARLY BIRD OFFER: 25% DISCOUNT</span> ON ALL COURSES. 
+        LIMITED SEATS AVAILABLE — REGISTER TODAY TO SECURE YOUR PLACE.
+      </span>
+    </div>
+  </div>
 
   <div class="container hero-grid">
 
     <div class="hero-text">
 
-      <h2>
+      <h2 class="hero-heading">
         Expert Tutoring for
+        <span class="hero-highlight">Every Student</span>
       </h2>
 
       <div class="hero-programs">
 
         <div class="hero-program">
-          <h3>Al Quran:</h3>
+          <h3>Al Quran Program</h3>
           <p>
-            Qaaida || Nazra-e-Quran || Hafiz-e-Quran ||
-            Translation of Holy Quran || Basic Islamic Knowledge;
+            Qaaida · Nazra-e-Quran · Hafiz-e-Quran ·
+            Translation of Holy Quran · Basic Islamic Knowledge
           </p>
         </div>
 
         <div class="hero-program">
-          <h3>British Curriculum:</h3>
+          <h3>British Curriculum</h3>
           <p>
-            Year 1 to Year 12 || 11+ Preparation || SATs || GCSE;
+            Year 1 to Year 12 · 11+ Preparation · SATs · GCSE/IGCSE/O Level · A Level · Edexcel · OCR · AQA 
           </p>
         </div>
 
         <div class="hero-program">
-          <h3>Languages:</h3>
+          <h3>Languages</h3>
           <p>
-            English || Urdu;
+            English Speaking · English Writing · Urdu Speaking · Urdu Writing
           </p>
         </div>
 
       </div>
 
-      <a
-        href="#inquiry"
-        class="btn-primary"
-        style="background:#D4AF37; color:#0A1C1A;"
-      >
-        Start Your Journey →
-      </a>
+      <div class="hero-buttons">
+        <a href="#inquiry" class="hero-btn-primary">
+          Start Your Journey →
+          <span class="btn-shimmer"></span>
+        </a>
+        <a href="#programs" class="hero-btn-secondary">
+          Explore Programs
+        </a>
+      </div>
 
     </div>
 
-
+    <!-- RIGHT PANEL -->
     <div>
 
-      <div
-        style="
-          background: rgba(255,255,240,0.1);
-          border-radius: 40px;
-          padding: 28px;
-          backdrop-filter: blur(2px);
-        "
-      >
+      <div class="hero-side-panel">
 
-        <p style="font-weight: 700; font-size: 1.3rem;">
-          Serving students across
+        <div class="side-panel-icon">🌙</div>
+
+        <p class="side-panel-title">
+          Serving Students Across
           <br>
-          all the world
+          <span class="side-panel-highlight">All the World</span>
         </p>
 
-        <p style="margin-top: 16px;">
-          Flexible online tutoring | Small groups | Score improvement guarantee
-        </p>
+        <div class="side-panel-features">
+          <span>Flexible online tutoring</span>
+          <span>Small group classes</span>
+          <span>Score improvement guarantee</span>
+          <span>Expert qualified teachers</span>
+        </div>
+
+        <div class="side-panel-badge">
+          Trusted by 500+ Students Worldwide
+        </div>
 
       </div>
 
@@ -1107,9 +1228,7 @@
 </section>
 
 
-<!-- ===================================================== -->
-<!-- ================= UES VIDEO SECTION ================= -->
-<!-- ===================================================== -->
+<!-- ================= VIDEO SECTION ================= -->
 
 <section class="ues-video-section">
 
@@ -1124,10 +1243,6 @@
       playsinline
       preload="metadata"
     >
-
-      <!-- ================================================= -->
-      <!-- REPLACE THE LINK BELOW WITH YOUR DIRECT MP4 LINK -->
-      <!-- ================================================= -->
 
       <source
         src="Ummah education.mp4.mp4"
@@ -2262,4 +2377,3 @@
 
 </body>
 </html>
-```
